@@ -71,22 +71,33 @@ function UsersPage() {
     <div className="container">
       <h1>User Management</h1>
 
-      <button className="sort-btn" onClick={handleSort}>
-        Sort {sortOrder === "asc" ? "A-Z" : "Z-A"}
-      </button>
-      <SearchBar onSearch={setSearch} />
+      <input
+        type="text"
+        placeholder="Search by name or email"
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+        style={{
+          padding: "8px 12px",
+          borderRadius: "6px",
+          border: "1px solid #ccc",
+          width: "250px",
+          marginBottom: "16px",
+          marginTop: "-2px",
+          marginLeft: "31%",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      />
+
       <UserForm
         onAddUser={handleAddUser}
         onUpdateUser={handleUpdateUser}
         editingUser={editingUser}
       />
-      <div
-        style={{
-          marginBottom: "20px",
-          display: "flex",
-          justifyContent: "flex-end",
-        }}
-      ></div>
+      <button className="sort-btn" onClick={handleSort}>
+        Sort {sortOrder === "asc" ? "A-Z" : "Z-A"}
+      </button>
+
       <UserList
         users={filteredUsers}
         onDeleteClick={handleDeleteClick}

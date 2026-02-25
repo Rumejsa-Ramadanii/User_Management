@@ -11,15 +11,25 @@ body {
 }
 
 .container {
-  max-width: 785px;
+  width: 785px;
   margin: auto;
   padding: 30px;
+}
+
+form.user-form {
+  width: 400px;
+  height: 200px;
+  margin-left: 150px;
+  display: flex;
+  justify-content: center;
 }
 
 h1 {
   text-align: center;
   margin-bottom: 30px;
+  margin-top: 10px;
   color: whitesmoke;
+  font-size: 45px;
 }
 
 p.company {
@@ -28,17 +38,18 @@ p.company {
 
 .card-container {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 25px;
+  margin-right: 18px;
 }
 
 .user-card {
   background: rgb(192, 101, 192);
   padding: 30px;
-  border-radius: 10px;
+  border-radius: 20px;
   flex: 0 0 300px;
   border: 2px solid whitesmoke;
-  box-shadow: 0 4px 10px rgba(15, 10, 10, 0.05);
   color: whitesmoke;
   transition:
     transform 0.2s ease,
@@ -64,7 +75,6 @@ p.company {
 
 .company {
   font-size: 14px;
-  color: #777;
   margin-bottom: 15px;
 }
 
@@ -86,6 +96,10 @@ p.company {
   cursor: pointer;
 }
 
+p {
+  color: whitesmoke;
+}
+
 .delete-btn:hover {
   background: #d61414;
 }
@@ -98,7 +112,6 @@ p.company {
   padding: 25px;
   border-radius: 12px;
   margin-bottom: 20px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .user-form input {
@@ -108,8 +121,7 @@ p.company {
   outline: none;
   font-size: 16px;
   background: #fff;
-  color: #333;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 2px 4px rgba(188, 79, 188, 0.607);
   transition: all 0.2s ease;
 }
 
@@ -138,6 +150,10 @@ p.company {
   color: #fff;
 }
 
+h3 {
+  color: whitesmoke;
+}
+
 .loading {
   text-align: center;
   font-size: 18px;
@@ -162,7 +178,7 @@ p.company {
 }
 
 .modal {
-  background: rgba(163, 71, 71, 0.95);
+  background: rgba(169, 83, 83, 0.95);
   padding: 30px 25px;
   border-radius: 12px;
   width: 100%;
@@ -286,7 +302,7 @@ p.company {
   margin-bottom: 20px;
   padding: 6px 12px;
   border: none;
-  background: #b864ba;
+  background: #e454e6de;
   color: white;
   border-radius: 6px;
   cursor: pointer;
